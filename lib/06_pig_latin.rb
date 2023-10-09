@@ -1,17 +1,24 @@
+def wovels(word)
+  word.concat("ay")
+end
+
+def consonant(word)
+  word_array = word.split("")
+  if word_array[0] == "c" && word_array[1] == "h" 
+    word_array.gsub(/[ch"]/).join("").concat("chay") 
+  else
+    word_array.reverse.join("").concat("ay")
+  end
+end
 
 
 
-# describe "#translate" do
+def translate(string)
+  
+end
 
-#   it "translates a word beginning with a vowel" do
-#     s = translate("apple")
-#     expect(s).to eq("appleay")
-#   end
-
-#   it "translates a word beginning with a consonant" do
-#     s = translate("banana")
-#     expect(s).to eq("ananabay")
-#   end
+#si begin wovels words+"ay"
+#si consonne reverse_word+"ay"
 
 #   it "translates a word beginning with two consonants" do
 #     s = translate("cherry")
