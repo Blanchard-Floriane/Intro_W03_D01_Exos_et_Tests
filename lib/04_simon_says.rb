@@ -18,27 +18,6 @@ def first_word(string)
   string.split(' ')[0..0].join(' ') #here we split by word, than only keep index of the first word to the first word, no more, then join words
 end
 
-def method_name
-  
+def titleize(string)
+  string.capitalize.split(' ').map{|word| word.length>3? word.capitalize : word}.join(' ') # l'expression ternaire (? :) remplace le else if, si mots de Plus de 3 lettres alors ... 
 end
-
-
-#   describe "titleize" do
-#     it "capitalizes a word" do
-#       expect(titleize("jaws")).to eq("Jaws")
-#     end
-
-#     it "capitalizes every word (aka title case)" do
-#       expect(titleize("david copperfield")).to eq("David Copperfield")
-#     end
-
-#     it "doesn't capitalize 'little words' in a title" do
-#       expect(titleize("war and peace")).to eq("War and Peace")
-#     end
-
-#     it "does capitalize 'little words' at the start of a title" do
-#       expect(titleize("the bridge over the river kwai")).to eq("The Bridge Over the River Kwai")
-#     end
-#   end
-
-# end
